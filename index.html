@@ -1,18 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Legible - Understand your agreements</title>
-    <meta name="description" content="Legible is a context-aware GenAI legal document assistant designed for employees reviewing employment agreements." />
-    <meta property="og:title" content="Legible - Understand your agreements" />
-    <meta property="og:description" content="Legible is a context-aware GenAI legal document assistant designed for employees reviewing employment agreements." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <title>Legible - Understand your legal documents</title>
+    <meta name="description" content="Legible helps you understand what matters across the legal documents related to your situation." />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --font-serif: 'Playfair Display', serif;
+        --font-sans: 'Inter', sans-serif;
+      }
+      .font-serif { font-family: var(--font-serif); }
+      .font-sans { font-family: var(--font-sans); }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
