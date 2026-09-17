@@ -69,12 +69,17 @@ export interface ContextState {
   personaCompany: string;
   selectedFocus: string[];
   documents: DocumentInfo[];
+  customConcern?: string;
 }
 
 export interface AppStore extends ContextState {
   setSituation: (situation: Situation) => void;
   setFocus: (focus: string[]) => void;
+  setCustomConcern: (concern: string) => void;
+  setPersona: (role: string, company: string) => void;
   addDocument: (doc: DocumentInfo) => void;
-  loadSampleDocuments: () => void;
+  removeDocument: (docId: string) => void;
+  setDocuments: (docs: DocumentInfo[]) => void;
+  loadSampleDocuments: (scenarioIndex?: number) => void;
   reset: () => void;
 }
