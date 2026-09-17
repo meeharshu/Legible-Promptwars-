@@ -120,8 +120,9 @@ export function OnboardingPage() {
               <p className="text-neutral-500 text-lg font-medium mb-10">This helps Legible understand standard industry context.</p>
               
               <div className="space-y-4">
-                <label className="text-sm font-bold text-neutral-900 uppercase tracking-wider">Your Role</label>
+                <label htmlFor="role-input" className="text-sm font-bold text-neutral-900 uppercase tracking-wider">Your Role</label>
                 <input 
+                  id="role-input"
                   type="text"
                   placeholder="e.g. Software Engineer, Marketing Manager"
                   value={role}
@@ -143,8 +144,9 @@ export function OnboardingPage() {
           {step === 4 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <h1 className="text-4xl font-extrabold tracking-tight mb-3">Anything specific you're worried about?</h1>
-              <p className="text-neutral-500 text-lg font-medium mb-10">Optional. Be as specific as you like.</p>
+              <label htmlFor="concern-input" className="block text-neutral-500 text-lg font-medium mb-10">Optional. Be as specific as you like.</label>
               <textarea 
+                id="concern-input"
                 placeholder="Example: I build software projects outside work."
                 value={concern}
                 onChange={e => setConcern(e.target.value)}

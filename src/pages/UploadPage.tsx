@@ -114,7 +114,7 @@ export function UploadPage() {
               </div>
 
               <div 
-                className={cn("flex-1 rounded-2xl border-2 border-dashed flex flex-col items-center justify-center p-12 transition-colors", isDragging ? "border-neutral-900 bg-neutral-100/50" : "border-neutral-300 bg-white hover:border-neutral-400 hover:bg-neutral-50")}
+                className={cn("flex-1 rounded-2xl border-2 border-dashed flex flex-col items-center justify-center p-12 transition-colors cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-neutral-900 focus-visible:ring-offset-2", isDragging ? "border-neutral-900 bg-neutral-100/50" : "border-neutral-300 bg-white hover:border-neutral-400 hover:bg-neutral-50")}
                 onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
                 onDragLeave={() => setIsDragging(false)}
                 onDrop={(e) => {
@@ -126,6 +126,15 @@ export function UploadPage() {
                   }
                 }}
                 onClick={() => fileInputRef.current?.click()}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    fileInputRef.current?.click();
+                  }
+                }}
+                tabIndex={0}
+                role="button"
+                aria-label="Upload document by clicking or dragging and dropping"
               >
                 <input type="file" ref={fileInputRef} className="hidden" onChange={handleFileUpload} accept=".pdf,.docx,.txt" />
                 <div className="h-16 w-16 bg-neutral-100 rounded-full flex items-center justify-center mb-6 text-neutral-600">
