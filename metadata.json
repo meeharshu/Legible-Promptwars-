@@ -1,0 +1,6 @@
+{
+  "name": "Legible",
+  "description": "Legible is a context-aware GenAI legal document assistant designed for employees reviewing employment agreements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
